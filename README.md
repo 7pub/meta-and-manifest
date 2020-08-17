@@ -169,17 +169,17 @@
 }
 ```
 
-### Some issues in browsers & its fixes
+### Häufige Probleme und deren Korrekturen
 
 #### `Android`
 
-- Icons for manifest.json, doesn't need to have many icons. Adding ```192px``` size icon will scale perfectly for most of the devices.
-- ```gcm_user_visible_only``` key removed in [Chrome 45](https://www.chromestatus.com/feature/5778950739460096) favor of the specified solution: [```userVisibleOnly```](https://developer.mozilla.org/en-US/docs/Web/API/PushManager/subscribe). 
+- Es müssen nicht alle Grössen der Symbole/Icons in der manifest.json Datei enthalten sein. Das Hinzufügen eines 192px Icon reicht in den Regel. 
+Ein Icon in dieser Dimension, lässt sich für die meisten Geräte perfekt skalieren.
+Der Schlüssel gcm_user_visible_only wurde in Chrome 45 zugunsten der angegebenen Lösung entfernt: (https://www.chromestatus.com/feature/5778950739460096) [```userVisibleOnly```](https://developer.mozilla.org/en-US/docs/Web/API/PushManager/subscribe). 
 
 #### `iOS`
 
-- In safari mobile browser, add to home screen will add black background for icon if its in PNG format. Make it as JPG to work.
-- Safari doesn't support manifest.json for add to home screen yet.
+- Safari unterstützt das Hinzufügen zum Startbildschirm mittels einer manifest.json Datei noch nicht. Haben Sie ihr Icon im PNG-Format vorliegen, wird dem Icon ein schwarzer Hintergrund hinzugefügt. Als Work-Around wird die Verwendung einer JPG Datei empfohlen, wenn Sie den mobilen Browser von Apple eine App zum Startbildschirm hinzufügen
 
 #### `UC Browser`
 
